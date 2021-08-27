@@ -1,6 +1,6 @@
 
 package controlador;
-
+import java.util.Date;
 import conexion.Conexion;
 import dao.AnimalDao;
 import modelo.Animal;
@@ -13,17 +13,19 @@ public class AnimalController {
         Conexion conn = new Conexion();
         AnimalDao ad = new AnimalDao(conn);
       
-       
-        Animal an = new Animal(0);
+   /*--------------------Insertar----------------------------------*/
+       Animal an = new Animal(0);
         System.out.println("Escriba el nombre del animal: ");
         an.setNombre(scan.next());
         System.out.println("Escriba el tipo de animal:");
         an.setTipo(scan.next());
+        
         //Fecha de registro
-        java.util.Date utilDate = new java.util.Date();
-        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+        Date fecha = new Date();
+        java.sql.Date sqlDate = new java.sql.Date(fecha.getTime());
         an.setFechaRegistro(sqlDate);
         
+      
         System.out.println("Escriba el peso del animal: ");
         an.setPeso(scan.nextFloat());
         
@@ -33,7 +35,7 @@ public class AnimalController {
         }else{
             System.out.println("\n----Registro no guardado----");
         }
-        
+  /*-------------------------Mostrar----------------------------------------*/      
         for(Animal an1: ad.selectAll()){
             an.getId();
             System.out.println("\n**************************");

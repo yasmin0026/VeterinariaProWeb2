@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Conexion {
+    //variables que guardan datos de la base de datos
     static String bd="veterinario";
     static String user="root";
     static String pass ="";
@@ -12,6 +13,7 @@ public class Conexion {
     
     Connection conn = null;
     
+    /*------------------Conexion-------------------------------*/
     public Conexion(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
@@ -23,6 +25,7 @@ public class Conexion {
             System.out.println("Error de conexion" + e);
         }
     }
+    
     
     public Connection conectar(){
         return conn;

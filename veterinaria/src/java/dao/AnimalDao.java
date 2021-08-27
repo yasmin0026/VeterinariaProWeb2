@@ -11,11 +11,11 @@ import modelo.Animal;
 public class AnimalDao {
     Conexion conn;
     
-    
+    //Constructor
     public AnimalDao(Conexion conn){
         this.conn = conn;
     }
-    
+   /*----------------------Insertar--------------------------------*/
     public boolean insert(Animal an){
         String sql = "insert into animal values(?,?,?,?,?)";
         try{
@@ -32,7 +32,7 @@ public class AnimalDao {
         }
     
     }
-    
+   /*----------------------Listar---------------------------------------*/ 
     public List<Animal> selectAll(){
         String sql = "select * from animal";
         try{
