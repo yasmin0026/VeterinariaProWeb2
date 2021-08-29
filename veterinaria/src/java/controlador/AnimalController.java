@@ -14,9 +14,10 @@ public class AnimalController {
         AnimalDao ad = new AnimalDao(conn);
       
    /*--------------------Insertar----------------------------------*/
-       Animal an = new Animal(0);
+        Animal an = new Animal(0);
         System.out.println("Escriba el nombre del animal: ");
         an.setNombre(scan.next());
+        
         System.out.println("Escriba el tipo de animal:");
         an.setTipo(scan.next());
         

@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 
 public class Conexion {
     //variables que guardan datos de la base de datos
-    static String bd="veterinario";
+    static String bd="veterinaria";
     static String user="root";
     static String pass ="";
     static String url="jdbc:mysql://localhost:3306/"+ bd;
